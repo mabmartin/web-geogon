@@ -173,8 +173,29 @@
 }
 
 
+.redes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;}
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #333; /* Color de fondo */
+    color: white; /* Color del icono */
+    border-radius: 50%; /* Hace que sean círculos */
+    margin: 40px;
+    text-decoration: none;
+    font-size: 20px;
+}
 
-
+.icon:hover {
+    background-color: #555; /* Cambio de color al pasar el mouse */
+}
 
 @media (max-width: 991.98px) {
     .navbar-light .navbar-nav .nav-link  {
@@ -554,4 +575,3 @@
 
 .footer .copyright a {
     color: var(--light);
-}
