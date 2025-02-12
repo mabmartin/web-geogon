@@ -102,11 +102,11 @@
     opacity: 0; /* Inicialmente invisible */
     transform: translateX(-100%); /* Comienza desde la izquierda */
     animation: aparecerDeIzquierda 2s forwards; /* Animación para mover desde la izquierda */
-    background-image: url('../img/geofondo.jpg');
+    background-image: url('../img/mapa-hidrogeologico.jpg');
     color: #FFFFFF; 
     background-size: cover;
     border-radius: 20px;
-    opacity: 0.1;
+    opacity: 0.8;
   }
 
   /* Animación para hacer que el contenido entre de la izquierda */
@@ -133,57 +133,49 @@
   }
 
   
-/* desdeac */
-  
-  .gallery-container {
-    background-color: #14376d; 
-    border-radius: 16px; 
-    padding: 20px; 
-    margin: 20px auto; 
-    max-width: 1200px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-    min-height: 600px; 
-  }
-  
-  
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-    gap: 10px; 
-    grid-auto-rows: 200px; 
-  }
-  
-  
-  .gallery img {
+
+   /* slider 3d */
+   .body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: #FFFFFF;
+    perspective: 1000px;
+}
+   .carousel {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: rotate 20s infinite linear;
+}
+.slide {
+    position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: cover; 
-    border-radius: 8px; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-  }
-  
-  .gallery img:hover {
-    
-    
-    transform: scale(1.05);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
 }
- 
-  .gallery img:nth-child(1) {
-    grid-row: span 2; 
-    grid-column: span 2; 
-  }
-  
-  .gallery img:nth-child(2) {
-    grid-row: span 3; 
-  }
-  
-  .gallery img:nth-child(3) {
-    grid-column: span 2; 
-  }
-  
-  .gallery img:nth-child(4) {
-    grid-row: span 2; 
-  }
+        .slide:nth-child(1) { transform: rotateY(0deg) translateZ(400px); background-image: url('../img/agua1.webp'); }
+        .slide:nth-child(2) { transform: rotateY(45deg) translateZ(400px); background-image: url('../img/agua2.webp'); }
+        .slide:nth-child(3) { transform: rotateY(90deg) translateZ(400px); background-image: url('../img/agua3.jpg'); }
+        .slide:nth-child(4) { transform: rotateY(135deg) translateZ(400px); background-image: url('../img/agua4.webp'); }
+        .slide:nth-child(5) { transform: rotateY(180deg) translateZ(400px); background-image: url('../img/agua5.jpg'); }
+        .slide:nth-child(6) { transform: rotateY(225deg) translateZ(400px); background-image: url('../img/agua6.jpg'); }
+        .slide:nth-child(7) { transform: rotateY(270deg) translateZ(400px); background-image: url('../img/agua7.jpg'); }
+        .slide:nth-child(8) { transform: rotateY(315deg) translateZ(400px); background-image: url('../img/agua8.jpg'); }
+
+@keyframes rotate {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+}
+
+
+
+
+
 @media (max-width: 991.98px) {
     .navbar-light .navbar-nav .nav-link  {
         margin-right: 0;
