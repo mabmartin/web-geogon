@@ -139,7 +139,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    height: 70vh;
     background-color: #FFFFFF;
     perspective: 1000px;
 }
@@ -575,3 +575,4 @@
 
 .footer .copyright a {
     color: var(--light);
+}
