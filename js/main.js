@@ -113,25 +113,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
-
-        navLinks.forEach(link => {
-            link.addEventListener("mouseover", function () {
-                // Remueve active de todos los enlaces
-                navLinks.forEach(l => l.classList.remove("active"));
-                // Agrega active al enlace actual
-                this.classList.add("active");
-            });
-        });
-
-        // Opcional: Remover la clase active cuando el mouse sale de la navbar
-        document.querySelector(".navbar-nav").addEventListener("mouseleave", function () {
-            navLinks.forEach(l => l.classList.remove("active"));
-            // Puedes volver a dejar activo "Inicio" si es necesario
-            navLinks[0].classList.add("active");
-        });
-    });
-</script>
 
