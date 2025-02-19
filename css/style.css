@@ -95,6 +95,12 @@
     color: var(--primary);
 }
 
+
+
+
+
+
+
 .contenido {
     max-width: 900px;
     margin: 0 auto;
@@ -150,6 +156,78 @@
     transform-style: preserve-3d;
     animation: rotate 20s infinite linear;
 }
+
+/* Ajustes para el carrusel */
+.header-carousel .owl-carousel-item {
+    position: relative;
+    height: 100vh; /* Mantiene el 100% del viewport height */
+}
+
+.header-carousel .owl-carousel-item img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Ajuste de la posición del contenido */
+.header-carousel .owl-carousel-item .position-absolute {
+    padding-top: 0 !important;
+    display: flex;
+    align-items: center !important; /* Cambiado a center para mejor distribución */
+    padding-bottom: 0; /* Eliminado el padding bottom */
+}
+
+/* Ajustes para el contenedor de texto */
+.header-carousel .owl-carousel-item .col-10.col-lg-8 {
+    padding: 2rem;
+    margin-bottom: 5%; /* Espacio desde abajo */
+}
+
+/* Ajustes de texto */
+.header-carousel .owl-carousel-item h5 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem !important;
+}
+
+.header-carousel .owl-carousel-item h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem !important;
+}
+
+/* Ajustes responsive */
+@media (max-width: 768px) {
+    .header-carousel .owl-carousel-item {
+        height: 100vh;
+    }
+    
+    .header-carousel .owl-carousel-item h1 {
+        font-size: 2rem; /* Texto más pequeño en móviles */
+    }
+    
+    .header-carousel .owl-carousel-item h5 {
+        font-size: 1rem;
+    }
+    
+    .header-carousel .owl-carousel-item .col-10.col-lg-8 {
+        margin-bottom: 15%; /* Más espacio en móviles */
+    }
+}
+
+/* Asegurarse que el contenedor no tenga padding que afecte */
+.container-fluid.p-0.pb-5 {
+    padding-bottom: 0 !important;
+}
+
+/* Mejora de la legibilidad del texto */
+.header-carousel .owl-carousel-item .position-absolute {
+    background: rgba(6, 3, 21, .6) !important; /* Fondo un poco más oscuro */
+}
+
+
+
+
 .slide {
     position: absolute;
     width: 100%;
@@ -177,6 +255,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     justify-content: center;
     margin-top: 20px;}
 .icon {
@@ -214,7 +293,7 @@
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: var(--dark);
+    color: var(--light);
     font-weight: 500;
 }
 
@@ -268,7 +347,8 @@
 @media (max-width: 768px) {
     .header-carousel .owl-carousel-item {
         position: relative;
-        min-height: 500px;
+    
+        min-height:50 vh;
     }
     
     .header-carousel .owl-carousel-item img {
@@ -288,6 +368,54 @@
         font-size: 30px;
         font-weight: 600;
     }
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.animate-slideInDown {
+    animation: slideInDown 1s ease-out;
+}
+
+.animate-slideInLeft {
+    animation: slideInLeft 1s ease-out;
+}
+
+.animate-slideInRight {
+    animation: slideInRight 1s ease-out;
+}
+
+
+
 }
 
 .header-carousel .owl-nav {
@@ -575,4 +703,79 @@
 
 .footer .copyright a {
     color: var(--light);
+}
+/* agregados hover */
+/* Service Item Enhancement */
+.service-item {
+    background: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 0 45px rgba(0, 0, 0, .07);
+    height: 100%;
+    position: relative;
+    transition: none; /* Removemos la transición general */
+}
+
+.service-item .overflow-hidden {
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease-out;
+}
+
+.service-item:hover {
+    box-shadow: 0 10px 45px rgba(0, 0, 0, .1);
+}
+
+.service-item:hover img {
+    transform: scale(1.1);
+}
+
+.service-item h4 {
+    color: var(--dark);
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.service-item:hover h4 {
+    color: var(--primary);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .service-item {
+        margin-bottom: 1.5rem;
+    }
+    
+    .service-item img {
+        height: 200px;
+    }
+    
+    .service-item h4 {
+        font-size: 1.1rem;
+    }
+}
+
+/* Animation Enhancement */
+.wow.fadeInUp {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 40px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
 }

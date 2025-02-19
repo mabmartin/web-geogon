@@ -94,3 +94,44 @@
 
 })(jQuery);
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Obtener todos los enlaces del menú
+    const navLinks = document.querySelectorAll('.navbar-nav a');
+    
+    // Obtener el botón hamburguesa y el div que contiene el menú
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    
+    // Agregar evento click a cada enlace del menú
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            // Verificar si el menú está abierto (tiene la clase show)
+            if (navbarCollapse.classList.contains('show')) {
+                // Simular clic en el botón hamburguesa para cerrar el menú
+                navbarToggler.click();
+            }
+        });
+    });
+});
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+        navLinks.forEach(link => {
+            link.addEventListener("mouseover", function () {
+                // Remueve active de todos los enlaces
+                navLinks.forEach(l => l.classList.remove("active"));
+                // Agrega active al enlace actual
+                this.classList.add("active");
+            });
+        });
+
+        // Opcional: Remover la clase active cuando el mouse sale de la navbar
+        document.querySelector(".navbar-nav").addEventListener("mouseleave", function () {
+            navLinks.forEach(l => l.classList.remove("active"));
+            // Puedes volver a dejar activo "Inicio" si es necesario
+            navLinks[0].classList.add("active");
+        });
+    });
+</script>
+
