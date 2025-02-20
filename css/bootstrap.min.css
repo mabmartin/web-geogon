@@ -26445,7 +26445,7 @@ fieldset:disabled .btn {
   margin-bottom: 1.5rem !important;
 }
 .mb-5 {
-  margin-bottom: 3rem !important;
+  margin-bottom: 1rem !important;
 }
 .mb-auto {
   margin-bottom: auto !important;
@@ -26649,8 +26649,8 @@ fieldset:disabled .btn {
   padding-bottom: 1.5rem !important;
 }
 .py-5 {
-  padding-top: 3rem !important;
-  padding-bottom: 3rem !important;
+  padding-top: 2rem !important;
+  padding-bottom: 1rem !important;
 }
 .pt-0 {
   padding-top: 0 !important;

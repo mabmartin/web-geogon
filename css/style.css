@@ -5,6 +5,11 @@
     --light: #F8F2F0;
     --dark: #060315;
 }
+html {
+    scroll-padding-top: 80px; /* Ajusta este valor según la altura de tu header */
+    scroll-behavior: smooth; /* Agrega un desplazamiento suave */
+}
+
 
 .fw-medium {
     font-weight: 600 !important;
@@ -587,40 +592,29 @@
     background: var(--secondary);
 }
 
-
-/*** Testimonial ***/
-.testimonial-carousel .owl-item .testimonial-item {
-    position: relative;
-    transition: .5s;
-}
-
-.testimonial-carousel .owl-item.center .testimonial-item {
-    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
-    animation: pulse 1s ease-out .5s;
-}
-
-.testimonial-carousel .owl-dots {
+.container-minerlogia {
     display: flex;
+    justify-content: center; /* Centra los elementos */
     align-items: center;
-    justify-content: center;
+    gap: 40px; /* Aumenta el espacio entre los elementos */
+    flex-wrap: wrap; /* Permite que se adapten en pantallas pequeñas */
 }
 
-.testimonial-carousel .owl-dot {
-    position: relative;
-    display: inline-block;
-    margin: 0 5px;
-    width: 15px;
-    height: 15px;
-    background: var(--primary);
-    border: 5px solid var(--light);
-    border-radius: 15px;
-    transition: .5s;
+.rocas, .suelo {
+    flex: 1;
+    text-align: center;
 }
 
-.testimonial-carousel .owl-dot.active {
-    background: var(--light);
-    border-color: var(--primary);
+.rocas img, .suelo img {
+    width: 100%; /* Hace que ambas imágenes ocupen todo el contenedor */
+    max-width: 600px; /* Aumenta el tamaño de las imágenes */
+    height: 400px; /* Define una altura fija */
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
 }
+
 
 
 /*** Contact ***/
