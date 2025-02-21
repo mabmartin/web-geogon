@@ -17,12 +17,26 @@
 
 
     // Sticky Navbar
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 300) {
-            $('.sticky-top').css('top', '0px');
-        } else {
-            $('.sticky-top').css('top', '-100px');
-        }
+    $(document).ready(function() {
+        // Sticky Navbar
+        var navbar = $('.sticky-top'); // Referencia al navbar
+    
+        // Asegúrate de que el navbar esté visible al inicio
+        navbar.css('top', '0px');
+    
+        $(window).scroll(function () {
+            var scrollPosition = $(this).scrollTop(); // Posición actual del scroll
+            if (scrollPosition > 300) {
+                // Cuando el usuario hace scroll hacia abajo, el navbar se mueve hacia abajo
+                navbar.css('top', '0px');
+            } else if (scrollPosition <= 0) {
+                // Cuando el usuario está en la parte superior de la página, el navbar está visible
+                navbar.css('top', '0px');
+            } else {
+                // Ajustes para mantener el navbar visible
+                navbar.css('top', '0px');
+            }
+        });
     });
     
     
@@ -113,4 +127,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+const btn = document.getElementById('button');
 
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Enviando...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_taw95hd';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'ENVIAR MENSAJE';
+      alert('Mensaje enviado correctamente!');
+      this.reset();
+    }, (err) => {
+      btn.value = 'ENVIAR MENSAJE';
+      alert(JSON.stringify(err));
+    });
+});

@@ -73,7 +73,11 @@
                 </div>
                 <a href="#contacto" class="nav-item nav-link">Contacto</a>
             </div>
-            <h5 class="m-0 pe-lg-5 d-none d-lg-block"><i class="fa fa-phone-alt text-primary me-3"></i>3571 602038</h5>
+            <h5 class="m-0 pe-lg-5 d-none d-lg-block">
+                <i class="fa fa-phone-alt text-primary me-3"></i>
+                <a href="https://wa.me/+5493571602038" target="_blank" class="text-decoration-none">3571 602038</a>
+            </h5>
+            
         </div>
     </nav>
     <!-- Navbar End -->
@@ -368,7 +372,7 @@
                                 <a href="https://wa.me/+5493571602038"
                                     style="text-decoration: none; color: inherit;">3571 602038</a>
                             </h3>
-                             </a>
+                            </a>
                         </div>
 
                     </div><br>
@@ -392,38 +396,44 @@
                 </div>
                 <div class="col-lg-7">
                     <div class="bg-light text-center p-5 wow fadeIn" data-wow-delay="0.5s">
-                        <form id="contacto-form" action="https://formspree.io/f/tu-formulario-id" method="POST">
+                        <form id="form" action="https://formspree.io/f/tu-formulario-id" method="POST">
 
                             <div class="row g-3">
                                 <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control border-0" placeholder="Nombre"
+                                    <input type="text" class="form-control border-0" placeholder="Nombre" name="name" required
                                         style="height: 55px;">
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    <input type="email" class="form-control border-0" placeholder="Email"
+                                    <input type="email" class="form-control border-0" placeholder="Email" name="email" required
                                         style="height: 55px;">
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control border-0" placeholder="Teléfono"
+                                    <input type="text" class="form-control border-0" placeholder="Teléfono" name="phone" required
                                         style="height: 55px;">
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    <select class="form-select border-0" style="height: 55px;">
-                                        <option selected>Seleccione</option>
-                                        <option value="1">Presupuesto</option>
-                                        <option value="2">Asesoramiento</option>
-                                        <option value="3">Otros</option>
+                                    <select class="form-select border-0"  name="contacto" required style="height: 55px;">
+                                        <option selected disabled value="">Seleccione</option>
+                                        <option value="Presupuesto" name="presupuesto">Presupuesto</option>
+                                        <option value="Asesoramiento" name="asesoramiento">Asesoramiento</option>
+                                        <option value="Otros" name="otros">Otros</option>
                                     </select>
                                 </div>
                                 <div class="col-12">
-                                    <textarea class="form-control border-0" placeholder="Mensaje"
+                                    <textarea class="form-control border-0" placeholder="Mensaje" name="message" required
                                         style="height: 100px;"></textarea>
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Enviar</button>
+                                    <input type="submit" class="btn btn-primary w-100 py-3"  id="button" value="ENVIAR MENSAJE">
                                 </div>
                             </div>
                         </form>
+                        <script type="text/javascript"
+                            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+                        <script type="text/javascript">
+                            emailjs.init('1-OYtHiWxprSoPjW2')
+                        </script>
                     </div>
                 </div>
             </div>
@@ -443,8 +453,14 @@
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Ubicación</h4>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Río Tercero, Córdoba</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>3571 602038</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>geologiagon@gmail.com</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>
+                        <a href="https://wa.me/+5493571602038" class="text-light">3571 602038</a>
+                    </p>
+                    
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>
+                        <a href="mailto:geologiagon@gmail.com" class="text-light">geologiagon@gmail.com</a>
+                    </p>
+                    
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social"
                             href="https://www.instagram.com/geo.perfo?igsh=aXpyaG91YmJqamN1"><i
@@ -457,17 +473,17 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Servicios</h4>
-                    <a class="btn btn-link" href="">Geotecnia</a>
-                    <a class="btn btn-link" href="">Agua</a>
-                    <a class="btn btn-link" href="">Mineralogía</a>
+                    <a class="btn btn-link" href="#servicios">Geotecnia</a>
+                    <a class="btn btn-link" href="#agua">Agua</a>
+                    <a class="btn btn-link" href="#mineralogia">Mineralogía</a>
 
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Enlaces rapidos</h4>
-                    <a class="btn btn-link" href="">Inicio</a>
-                    <a class="btn btn-link" href="">Nosotros</a>
-                    <a class="btn btn-link" href="">Servicios</a>
-                    <a class="btn btn-link" href="">Contactos</a>
+                    <a class="btn btn-link" href="#">Inicio</a>
+                    <a class="btn btn-link" href="#nosotros">Nosotros</a>
+                    <a class="btn btn-link" href="#servicios">Servicios</a>
+                    <a class="btn btn-link" href="#contacto">Contactos</a>
 
                 </div>
 
