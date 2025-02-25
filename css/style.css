@@ -128,8 +128,8 @@ html, body {
     opacity: 0; /* Inicialmente invisible */
     transform: translateX(-100%); /* Comienza desde la izquierda */
     animation: aparecerDeIzquierda 2s forwards; /* Animación para mover desde la izquierda */
-    background-image: url('../img/mapa-hidrogeologico.jpg');
-    color: #FFFFFF; 
+    background-image: url('../img/fondo-agua.png');
+    color: #ffff; 
     background-size: cover;
     border-radius: 20px;
     opacity: 0.8;
@@ -218,11 +218,40 @@ html, body {
     line-height: 1.2;
     margin-bottom: 1.5rem !important;
 }
+/* Ajustes para los botones del carrusel */
+.header-carousel .btn {
+    min-width: 180px; /* Define un ancho mínimo para que sean iguales */
+    padding: 12px 24px; /* Ajusta el tamaño del padding */
+    text-align: center;
+    display: inline-block;
+    margin-right: 10px; /* Espaciado entre los botones */
+}
+
+
+
+
+
 
 /* Ajustes responsive */
 @media (max-width: 768px) {
+    .header-carousel .btn {
+        width: 100%; /* Hace que ocupen el ancho disponible en pantallas pequeñas */
+        margin-right: 0; /* Elimina el margen derecho */
+        margin-bottom: 10px; /* Agrega espacio entre los botones */
+    }
     .header-carousel .owl-carousel-item {
-        height: 100vh;
+        height: 100vh !important; /* Forzar altura completa */
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        overflow: hidden !important; /* Evita desbordes */
+        position: relative !important;
+    }
+    .header-carousel .owl-carousel-item img {
+         width: 100% !important;
+        height: 100vh !important; /* Asegurar que llene toda la altura */
+        object-fit: cover !important; /* Llenar el espacio sin distorsión */
+        object-position: center top; /* Centrar la imagen sin perder lo importante */
     }
     
     .header-carousel .owl-carousel-item h1 {
@@ -235,6 +264,19 @@ html, body {
     
     .header-carousel .owl-carousel-item .col-10.col-lg-8 {
         margin-bottom: 15%; /* Más espacio en móviles */
+    }
+    .contenido {
+        
+        margin: 5px;
+        background-size:auto
+        
+    }
+    .container-minerlogia {
+        display: flex
+    ;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
     }
 }
 
