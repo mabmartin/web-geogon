@@ -108,25 +108,45 @@
 
 })(jQuery);
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Obtener todos los enlaces del menú
-    const navLinks = document.querySelectorAll('.navbar-nav a');
-    
-    // Obtener el botón hamburguesa y el div que contiene el menú
-    const navbarToggler = document.querySelector('.navbar-toggler');
-    const navbarCollapse = document.querySelector('.navbar-collapse');
-    
-    // Agregar evento click a cada enlace del menú
+document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll(".navbar-nav a"); // Todos los enlaces del menú
+    const navbarToggler = document.querySelector(".navbar-toggler"); // Botón hamburguesa
+    const navbarCollapse = document.querySelector(".navbar-collapse"); // Contenedor del menú
+    const dropdownToggle = document.querySelector(".dropdown-toggle"); // Botón "Servicios"
+    const dropdownMenu = document.querySelector(".dropdown-menu"); // Menú de "Servicios"
+
+    // Cerrar el menú hamburguesa al hacer clic en cualquier opción (excepto "Servicios")
     navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            // Verificar si el menú está abierto (tiene la clase show)
-            if (navbarCollapse.classList.contains('show')) {
-                // Simular clic en el botón hamburguesa para cerrar el menú
-                navbarToggler.click();
+        link.addEventListener("click", function (event) {
+            if (!this.classList.contains("dropdown-toggle")) { // Si no es el botón de "Servicios"
+                if (navbarCollapse.classList.contains("show")) {
+                    navbarToggler.click(); // Cierra el menú hamburguesa
+                }
             }
         });
     });
+
+    // Hacer que el dropdown de "Servicios" funcione con clic en móviles
+    dropdownToggle.addEventListener("click", function (event) {
+        event.preventDefault(); // Evita que se recargue la página
+
+        // Alternar la visibilidad del dropdown sin cerrar el menú hamburguesa
+        dropdownMenu.classList.toggle("show");
+        this.parentElement.classList.toggle("show");
+    });
+
+    // Cerrar el dropdown de "Servicios" si se hace clic fuera de él
+    document.addEventListener("click", function (event) {
+        if (!dropdownToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
+            dropdownMenu.classList.remove("show");
+            dropdownToggle.parentElement.classList.remove("show");
+        }
+    });
 });
+
+
+
+
 const btn = document.getElementById('button');
 
 document.getElementById('form')

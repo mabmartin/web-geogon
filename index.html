@@ -48,38 +48,34 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow border-top border-5 border-primary sticky-top p-0">
         <a href="index.html" class="navbar-brand bg-primary d-flex align-items-center px-4 px-lg-5">
-
             <img src="img/logo.png" width="80px" height="70px" alt="Logo">
         </a>
-
+    
+        <!-- Aquí colocamos el H6 FUERA del menú colapsable -->
+        <h6 class="m-0 px-3">M.P:A-869</h6> 
+    
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"> <i class="fa fa-bars text-white"></i></span>
+            <span class="navbar-toggler-icon"><i class="fa fa-bars text-white"></i></span>
         </button>
+    
         <div class="collapse navbar-collapse" id="navbarCollapse">
-            <H6>M.P:A-869</H6>
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-
                 <a href="#" class="nav-item nav-link">Inicio</a>
                 <a href="#nosotros" class="nav-item nav-link">Nosotros</a>
-
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Servicios</a>
-                    <div class="dropdown-menu fade-up m-0">
-                        <a href="#servicios" class="dropdown-item">Geotecnia</a>
-                        <a href="#agua" class="dropdown-item">Agua</a>
-                        <a href="#mineralogia" class="dropdown-item">Mineralogía</a>
-
-                    </div>
+                    <ul class="dropdown-menu">
+                        <li><a href="#servicios" class="dropdown-item">Geotecnia</a></li>
+                        <li><a href="#agua" class="dropdown-item">Agua</a></li>
+                        <li><a href="#mineralogia" class="dropdown-item">Mineralogía</a></li>
+                    </ul>
                 </div>
                 <a href="#contacto" class="nav-item nav-link">Contacto</a>
             </div>
-            <h5 class="m-0 pe-lg-5 d-none d-lg-block">
-                <i class="fa fa-phone-alt text-primary me-3"></i>
-                <a href="https://wa.me/+5493571602038" target="_blank" class="text-decoration-none">3571 602038</a>
-            </h5>
-            
         </div>
     </nav>
+    
+    
     <!-- Navbar End -->
 
 

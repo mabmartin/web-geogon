@@ -268,8 +268,9 @@ html, body {
     .contenido {
         
         margin: 5px;
-        background-size:auto
         
+        background-position: right;
+        background-repeat: no-repeat;
     }
     .container-minerlogia {
         display: flex
@@ -396,6 +397,7 @@ html, body {
         top: 150%;
         opacity: 0;
         visibility: hidden;
+        
         transition: .5s;
     }
 
@@ -406,6 +408,7 @@ html, body {
         opacity: 1;
     }
 }
+
 
 
 /*** Header ***/
