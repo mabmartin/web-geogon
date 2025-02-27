@@ -122,18 +122,16 @@ html, body {
 
 
 .contenido {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 40px;
-    opacity: 0; /* Inicialmente invisible */
-    transform: translateX(-100%); /* Comienza desde la izquierda */
-    animation: aparecerDeIzquierda 2s forwards; /* Animación para mover desde la izquierda */
     background-image: url('../img/fondo-agua.png');
-    color: #ffff; 
     background-size: cover;
-    border-radius: 20px;
-    opacity: 0.8;
-  }
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 50vh; /* Permite que el contenedor tenga un mínimo de altura */
+    color: white; /* Asegura que el texto sea blanco */
+    padding: 5px; /* Espacio alrededor del contenido */
+    border-radius: 8px; /* Bordes redondeados */
+    margin: 5px;
+}
 
   /* Animación para hacer que el contenido entre de la izquierda */
   @keyframes aparecerDeIzquierda {
@@ -266,11 +264,7 @@ html, body {
         margin-bottom: 15%; /* Más espacio en móviles */
     }
     .contenido {
-        
-        margin: 5px;
-        ;
-        background-position: center;
-        background-repeat: no-repeat;
+        min-height: 200px; /* Reducir la altura en móviles */
     }
     .container-minerlogia {
         display: flex
