@@ -268,8 +268,8 @@ html, body {
     .contenido {
         
         margin: 5px;
-        
-        background-position: right;
+        ;
+        background-position: center;
         background-repeat: no-repeat;
     }
     .container-minerlogia {
