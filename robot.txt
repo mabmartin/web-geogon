@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /admin/
+Sitemap: https://geogonsg.com/sitemap.xml

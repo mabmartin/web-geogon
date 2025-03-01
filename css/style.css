@@ -122,7 +122,7 @@ html, body {
 
 
 .contenido {
-    background-image: url('../img/fondo-agua.png');
+    background-image: url('../img/fondo-agua.png') ;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -130,7 +130,7 @@ html, body {
     color: white; /* Asegura que el texto sea blanco */
     padding: 5px; /* Espacio alrededor del contenido */
     border-radius: 8px; /* Bordes redondeados */
-    margin: 5px;
+    margin: 25px;
 }
 
   /* Animación para hacer que el contenido entre de la izquierda */
@@ -262,7 +262,7 @@ html, body {
     }
     
     .header-carousel .owl-carousel-item .col-10.col-lg-8 {
-        margin-bottom: 15%; /* Más espacio en móviles */
+        margin-bottom: 5%; /* Más espacio en móviles */
     }
     .contenido {
         min-height: 200px; /* Reducir la altura en móviles */
@@ -299,13 +299,13 @@ html, body {
 
 }
         .slide:nth-child(1) { transform: rotateY(0deg) translateZ(400px); background-image: url('../img/agua1.jpg'); }
-        .slide:nth-child(2) { transform: rotateY(45deg) translateZ(400px); background-image: url('../img/agua2.jpg'); }
-        .slide:nth-child(3) { transform: rotateY(90deg) translateZ(400px); background-image: url('../img/agua3.jpg'); }
-        .slide:nth-child(4) { transform: rotateY(135deg) translateZ(400px); background-image: url('../img/agua4.webp'); }
-        .slide:nth-child(5) { transform: rotateY(180deg) translateZ(400px); background-image: url('../img/agua5.jpg'); }
-        .slide:nth-child(6) { transform: rotateY(225deg) translateZ(400px); background-image: url('../img/agua6.jpg'); }
-        .slide:nth-child(7) { transform: rotateY(270deg) translateZ(400px); background-image: url('../img/agua7.jpg'); }
-        .slide:nth-child(8) { transform: rotateY(315deg) translateZ(400px); background-image: url('../img/agua8.jpg'); }
+        .slide:nth-child(2) { transform: rotateY(45deg) translateZ(400px); background-image: url('../img/agua2.jpg') ; }
+        .slide:nth-child(3) { transform: rotateY(90deg) translateZ(400px); background-image: url('../img/agua3.jpg')  ; }
+        .slide:nth-child(4) { transform: rotateY(135deg) translateZ(400px); background-image: url('../img/agua4.webp')  ; }
+        .slide:nth-child(5) { transform: rotateY(180deg) translateZ(400px); background-image: url('../img/agua5.jpg') ; }
+        .slide:nth-child(6) { transform: rotateY(225deg) translateZ(400px); background-image: url('../img/agua6.jpg')  ; }
+        .slide:nth-child(7) { transform: rotateY(270deg) translateZ(400px); background-image: url('../img/agua7.jpg')  ; }
+        .slide:nth-child(8) { transform: rotateY(315deg) translateZ(400px); background-image: url('../img/agua8.jpg') ; }
 
 @keyframes rotate {
     from { transform: rotateY(0deg); }
