@@ -163,7 +163,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 35vh;
+    height: 50vh;
     background-color: #FFFFFF;
     perspective: 1000px;
     margin-top: 60px
@@ -296,6 +296,7 @@ html, body {
     background-size: cover;
     background-position: center;
     border-radius: 10px;
+
 }
         .slide:nth-child(1) { transform: rotateY(0deg) translateZ(400px); background-image: url('../img/agua1.jpg'); }
         .slide:nth-child(2) { transform: rotateY(45deg) translateZ(400px); background-image: url('../img/agua2.jpg'); }
@@ -783,4 +784,20 @@ html, body {
 
 .footer .copyright a {
     color: var(--light);
+}
+@media (max-width: 1024px) and (max-height: 600px) {
+    .slide {margin: 45px;}
+    #mineralogia {
+        margin-top: 49vh;
+        padding-top: 20px;
+    }
+    .body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+        background-color: #FFFFFF;
+        perspective: 1000px;
+        margin-top: 60px
+}
 }
