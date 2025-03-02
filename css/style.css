@@ -801,3 +801,26 @@ html, body {
         margin-top: 60px
 }
 }
+@media (max-height: 600px) {
+    .header-carousel .owl-carousel-item {
+        min-height: 60vh; /* Reduce el tamaño en horizontal */
+    }
+
+    .header-carousel .owl-carousel-item h1 {
+        font-size: 2rem; /* Reduce el tamaño del título */
+    }
+
+    .header-carousel .owl-carousel-item p {
+        font-size: 1rem;
+    }
+
+    .header-carousel .btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+@media (orientation: landscape) {
+    body {
+        overflow-y: auto; /* Permite hacer scroll en horizontal */
+    }
+}
