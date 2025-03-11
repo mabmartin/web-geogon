@@ -169,3 +169,24 @@ document.getElementById('form')
       alert(JSON.stringify(err));
     });
 });
+document.addEventListener("DOMContentLoaded", function () {
+    let lastScrollTop = 0;
+    const navbar = document.querySelector(".navbar");
+    const body = document.body;
+
+    window.addEventListener("scroll", function () {
+        let currentScroll = window.scrollY;
+
+        if (window.matchMedia("(max-width: 1024px) and (orientation: landscape)").matches) {
+            if (currentScroll > lastScrollTop) {
+                navbar.style.top = "-80px"; // Oculta el navbar al hacer scroll arriba
+            } else {
+                navbar.style.top = "0"; // Muestra el navbar al hacer scroll abajo
+            }
+        } else {
+            navbar.style.top = "0"; // En otros modos, el navbar sigue visible
+        }
+
+        lastScrollTop = currentScroll;
+    });
+});

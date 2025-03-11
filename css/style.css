@@ -213,7 +213,7 @@ html, body {
 }
 
 .header-carousel .owl-carousel-item h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     line-height: 1.2;
     margin-bottom: 1.5rem !important;
 }
@@ -283,7 +283,7 @@ html, body {
 
 /* Mejora de la legibilidad del texto */
 .header-carousel .owl-carousel-item .position-absolute {
-    background: rgba(6, 3, 21, 0.22) !important; /* Fondo un poco más oscuro */
+    background: rgba(6, 3, 21, 0.537) !important; /* Fondo un poco más oscuro */
 }
 
 
@@ -528,7 +528,7 @@ html, body {
     align-items: center;
     justify-content: center;
     color: #FFFFFF;
-    background: transparent;
+    background: #00bf63;
     border: 1px solid #FFFFFF;
     border-radius: 45px;
     font-size: 22px;
@@ -681,26 +681,29 @@ html, body {
 
 .container-minerlogia {
     display: flex;
-    justify-content: center; /* Centra los elementos */
-    align-items: center;
-    gap: 40px; /* Aumenta el espacio entre los elementos */
-    flex-wrap: wrap; /* Permite que se adapten en pantallas pequeñas */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
 }
 
 .rocas, .suelo {
     flex: 1;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Asegura alineación uniforme */
+    min-height: 350px; /* Ajusta según necesites */
 }
 
 .rocas img, .suelo img {
-    width: 100%; /* Hace que ambas imágenes ocupen todo el contenedor */
-    max-width: 600px; /* Aumenta el tamaño de las imágenes */
-    height: 400px; /* Define una altura fija */
-    object-fit: cover; /* Ajusta la imagen sin deformarla */
-    display: block;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+    height: 300px; /* Unifica la altura */
+    object-fit: cover;
     border-radius: 10px;
 }
+
 
 
 
@@ -823,4 +826,21 @@ html, body {
     body {
         overflow-y: auto; /* Permite hacer scroll en horizontal */
     }
+}
+ @media (max-width: 1024px) and (orientation: landscape) {
+    .navbar {
+        position: fixed !important;
+        top: -80px; /* Se oculta al inicio */
+        width: 100%;
+        transition: top 0.3s ease-in-out;
+    }
+
+    body {
+        padding-top: 80px; /* Asegura que el contenido no quede tapado */
+    }
+}
+
+h1 {
+    font-size: 3.2rem !important; /* Cambia el tamaño según lo necesites */
+    font-weight: bold;
 }
