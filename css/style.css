@@ -5,18 +5,19 @@
     --light: #F8F2F0;
     --dark: #060315;
 }
+
+/* Base HTML & Body Settings */
 html {
-    scroll-padding-top: 80px; /* Ajusta este valor según la altura de tu header */
-    scroll-behavior: smooth; /* Agrega un desplazamiento suave */
+    scroll-padding-top: 80px;
+    scroll-behavior: smooth;
 }
+
 html, body {
-    overflow-x: hidden; /* Oculta el scroll lateral */
-    max-width: 100%; /* Asegura que el contenido no sobrepase el ancho */
+    overflow-x: hidden;
+    max-width: 100%;
 }
 
-
-
-
+/* Common Classes */
 .fw-medium {
     font-weight: 600 !important;
 }
@@ -28,7 +29,6 @@ html, body {
     bottom: 45px;
     z-index: 99;
 }
-
 
 /*** Spinner ***/
 #spinner {
@@ -43,7 +43,6 @@ html, body {
     visibility: visible;
     opacity: 1;
 }
-
 
 /*** Button ***/
 .btn {
@@ -87,8 +86,8 @@ html, body {
     top: 0;
     width: 100%;
     z-index: 1000;
-    background-color: white; /* Ajusta el color si es necesario */
-    transition: top 0.3s ease-in-out; /* Hace la animación más suave */
+    background-color: white;
+    transition: top 0.3s ease-in-out;
 }
 
 .navbar .dropdown-toggle::after {
@@ -115,268 +114,6 @@ html, body {
     color: var(--primary);
 }
 
-
-
-
-
-
-
-.contenido {
-    background-image: url('../img/fondo-agua.png') ;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 50vh; /* Permite que el contenedor tenga un mínimo de altura */
-    color: white; /* Asegura que el texto sea blanco */
-    padding: 5px; /* Espacio alrededor del contenido */
-    border-radius: 8px; /* Bordes redondeados */
-    margin: 25px;
-}
-
-  /* Animación para hacer que el contenido entre de la izquierda */
-  @keyframes aparecerDeIzquierda {
-    0% {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-
-  /* Estilo de listas */
-  ul {
-    text-align: left;
-    margin-top: 20px;
-    padding-left: 20px;
-  }
-
-  li {
-    margin-bottom: 10px;
-  }
-
-  
-
-   /* slider 3d */
-   .body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50vh;
-    background-color: #FFFFFF;
-    perspective: 1000px;
-    margin-top: 60px
-}
-   .carousel {
-    position: relative;
-    width: 300px;
-    height: 200px;
-    transform-style: preserve-3d;
-    animation: rotate 20s infinite linear;
-}
-
-/* Ajustes para el carrusel */
-.header-carousel .owl-carousel-item {
-  
-    height: 100vh; /* Mantiene el 100% del viewport height */
-    width: 100%;
-    position: relative;
-}
-
-.header-carousel .owl-carousel-item img {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    image-rendering: crisp-edges;
-}
-
-/* Ajuste de la posición del contenido */
-.header-carousel .owl-carousel-item .position-absolute {
-    padding-top: 0 !important;
-    display: flex;
-    align-items: center !important; /* Cambiado a center para mejor distribución */
-    padding-bottom: 0; /* Eliminado el padding bottom */
-}
-
-/* Ajustes para el contenedor de texto */
-.header-carousel .owl-carousel-item .col-10.col-lg-8 {
-    padding: 2rem;
-    margin-bottom: 5%; /* Espacio desde abajo */
-}
-
-/* Ajustes de texto */
-.header-carousel .owl-carousel-item h5 {
-    font-size: 1.25rem;
-    margin-bottom: 1rem !important;
-}
-
-.header-carousel .owl-carousel-item h1 {
-    font-size: 3.5rem;
-    line-height: 1.2;
-    margin-bottom: 1.5rem !important;
-}
-/* Ajustes para los botones del carrusel */
-.header-carousel .btn {
-    min-width: 180px; /* Define un ancho mínimo para que sean iguales */
-    padding: 12px 24px; /* Ajusta el tamaño del padding */
-    text-align: center;
-    display: inline-block;
-    margin-right: 10px; /* Espaciado entre los botones */
-}
-
-
-
-
-
-
-/* Ajustes responsive */
-@media (max-width: 768px) {
-    .header-carousel .btn {
-        width: 100%; /* Hace que ocupen el ancho disponible en pantallas pequeñas */
-        margin-right: 0; /* Elimina el margen derecho */
-        margin-bottom: 10px; /* Agrega espacio entre los botones */
-    }
-    .header-carousel .owl-carousel-item {
-        height: 100vh !important; /* Forzar altura completa */
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        overflow: hidden !important; /* Evita desbordes */
-        position: relative !important;
-    }
-    .header-carousel .owl-carousel-item img {
-         width: 100% !important;
-        height: 100vh !important; /* Asegurar que llene toda la altura */
-        object-fit: cover !important; /* Llenar el espacio sin distorsión */
-        object-position: center top; /* Centrar la imagen sin perder lo importante */
-    }
-    
-    .header-carousel .owl-carousel-item h1 {
-        font-size: 2rem; /* Texto más pequeño en móviles */
-    }
-    
-    .header-carousel .owl-carousel-item h5 {
-        font-size: 1rem;
-    }
-    
-    .header-carousel .owl-carousel-item .col-10.col-lg-8 {
-        margin-bottom: 5%; /* Más espacio en móviles */
-    }
-    .contenido {
-        min-height: 200px; /* Reducir la altura en móviles */
-    }
-    .container-minerlogia {
-        display: flex
-    ;
-    flex-direction: column;
-    justify-content: center;
-    margin: 10px;
-    }
-}
-
-/* Asegurarse que el contenedor no tenga padding que afecte */
-.container-fluid.p-0.pb-5 {
-    padding-bottom: 0 !important;
-}
-
-/* Mejora de la legibilidad del texto */
-.header-carousel .owl-carousel-item .position-absolute {
-    background: rgba(6, 3, 21, 0.537) !important; /* Fondo un poco más oscuro */
-}
-
-
-
-
-.slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-
-}
-        .slide:nth-child(1) { transform: rotateY(0deg) translateZ(400px); background-image: url('../img/agua1.jpg'); }
-        .slide:nth-child(2) { transform: rotateY(45deg) translateZ(400px); background-image: url('../img/agua2.jpg') ; }
-        .slide:nth-child(3) { transform: rotateY(90deg) translateZ(400px); background-image: url('../img/agua3.jpg')  ; }
-        .slide:nth-child(4) { transform: rotateY(135deg) translateZ(400px); background-image: url('../img/agua4.webp')  ; }
-        .slide:nth-child(5) { transform: rotateY(180deg) translateZ(400px); background-image: url('../img/agua5.jpg') ; }
-        .slide:nth-child(6) { transform: rotateY(225deg) translateZ(400px); background-image: url('../img/agua6.jpg')  ; }
-        .slide:nth-child(7) { transform: rotateY(270deg) translateZ(400px); background-image: url('../img/agua7.jpg')  ; }
-        .slide:nth-child(8) { transform: rotateY(315deg) translateZ(400px); background-image: url('../img/agua8.jpg') ; }
-
-@keyframes rotate {
-    from { transform: rotateY(0deg); }
-    to { transform: rotateY(360deg); }
-}
-
-
-.redes{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    margin-top: 20px;}
-.icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background-color: #333; /* Color de fondo */
-    color: white; /* Color del icono */
-    border-radius: 50%; /* Hace que sean círculos */
-    margin: 40px;
-    text-decoration: none;
-    font-size: 20px;
-}
-
-.icon:hover {
-    background-color: #555; /* Cambio de color al pasar el mouse */
-}
-#mineralogia {
-    margin-top: 10vh; /* Empuja la sección debajo del carrusel */
-    padding-top: 20px; /* Añade espacio para mejorar la separación */
-}
-
-@media (max-width: 1024px) and (max-height: 600px) {
-    .header-carousel .owl-carousel-item {
-        height: 80vh !important; /* Reduce la altura del slider */
-    }
-
-    .header-carousel .owl-carousel-item img {
-        height: 80vh !important;
-        object-fit: cover !important;
-    }
-
-    .header-carousel .owl-carousel-item h1 {
-        font-size: 2rem !important; /* Reduce el tamaño del título */
-    }
-
-    .header-carousel .owl-carousel-item h5 {
-        font-size: 1rem !important;
-    }
-
-    .header-carousel .btn {
-        padding: 8px 16px; /* Reduce el tamaño de los botones */
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 991.98px) {
-    .navbar-light .navbar-nav .nav-link  {
-        margin-right: 0;
-        padding: 10px 0;
-    }
-
-    .navbar-light .navbar-nav {
-        border-top: 1px solid #EEEEEE;
-    }
-}
-
 .navbar-light .navbar-brand,
 .navbar-light a.btn {
     height: 75px;
@@ -392,74 +129,108 @@ html, body {
     transition: .5s;
 }
 
-@media (min-width: 992px) {
-    .navbar-light .navbar-nav .nav-link::before {
-        position: absolute;
-        content: "";
-        width: 0;
-        height: 5px;
-        top: -6px;
-        left: 50%;
-        background: #FFFFFF;
-        transition: .5s;
-    }
+/*** Header Carousel ***/
+.header-carousel .owl-carousel-item {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
 
-    .navbar-light .navbar-nav .nav-link:hover::before,
-    .navbar-light .navbar-nav .nav-link.active::before {
-        width: 100%;
-        left: 0;
-    }
+.header-carousel .owl-carousel-item img {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    image-rendering: crisp-edges;
+}
 
-    .navbar-light .navbar-nav .nav-link.nav-contact::before {
-        display: none;
-    }
+.header-carousel .owl-carousel-item .position-absolute {
+    padding-top: 0 !important;
+    display: flex;
+    align-items: center !important;
+    padding-bottom: 0;
+    background: rgba(6, 3, 21, 0.537) !important;
+}
 
-    .navbar .nav-item .dropdown-menu {
-        display: block;
-        border: none;
-        margin-top: 0;
-        top: 150%;
+.header-carousel .owl-carousel-item .col-10.col-lg-8 {
+    padding: 2rem;
+    margin-bottom: 5%;
+}
+
+.header-carousel .owl-carousel-item h5 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem !important;
+}
+
+.header-carousel .owl-carousel-item h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem !important;
+}
+
+.header-carousel .btn {
+    min-width: 180px;
+    padding: 12px 24px;
+    text-align: center;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.header-carousel .owl-nav {
+    position: absolute;
+    top: 50%;
+    right: 8%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+}
+
+.header-carousel .owl-nav .owl-prev,
+.header-carousel .owl-nav .owl-next {
+    margin: 7px 0;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    background: #00bf63;
+    border: 1px solid #FFFFFF;
+    border-radius: 45px;
+    font-size: 22px;
+    transition: .5s;
+}
+
+.header-carousel .owl-nav .owl-prev:hover,
+.header-carousel .owl-nav .owl-next:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+/*** Content Section ***/
+.contenido {
+    background-image: url('../img/fondo-agua.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 50vh;
+    color: white;
+    padding: 5px;
+    border-radius: 8px;
+    margin: 25px;
+}
+
+/* Animations */
+@keyframes aparecerDeIzquierda {
+    0% {
+        transform: translateX(-100%);
         opacity: 0;
-        visibility: hidden;
-        
-        transition: .5s;
     }
-
-    .navbar .nav-item:hover .dropdown-menu {
-        top: 100%;
-        visibility: visible;
-        transition: .5s;
+    100% {
+        transform: translateX(0);
         opacity: 1;
     }
 }
-
-
-
-/*** Header ***/
-@media (max-width: 768px) {
-    .header-carousel .owl-carousel-item {
-        position: relative;
-    
-        min-height:50 vh;
-    }
-    
-    .header-carousel .owl-carousel-item img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .header-carousel .owl-carousel-item h5,
-    .header-carousel .owl-carousel-item p {
-        font-size: 14px !important;
-        font-weight: 400 !important;
-    }
-
-    .header-carousel .owl-carousel-item h1 {
-        font-size: 30px;
-        font-weight: 600;
-    }
 
 @keyframes slideInDown {
     from {
@@ -506,41 +277,119 @@ html, body {
     animation: slideInRight 1s ease-out;
 }
 
-
-
+/* List Styles */
+ul {
+    text-align: left;
+    margin-top: 20px;
+    padding-left: 20px;
 }
 
-.header-carousel .owl-nav {
+li {
+    margin-bottom: 10px;
+}
+
+/*** 3D Slider ***/
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background-color: #FFFFFF;
+    perspective: 1000px;
+    margin-top: 60px;
+}
+
+.carousel {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: rotate 20s infinite linear;
+}
+
+.slide {
     position: absolute;
-    top: 50%;
-    right: 8%;
-    transform: translateY(-50%);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.slide:nth-child(1) { transform: rotateY(0deg) translateZ(400px); background-image: url('../img/agua1.jpg'); }
+.slide:nth-child(2) { transform: rotateY(45deg) translateZ(400px); background-image: url('../img/agua2.jpg'); }
+.slide:nth-child(3) { transform: rotateY(90deg) translateZ(400px); background-image: url('../img/agua3.jpg'); }
+.slide:nth-child(4) { transform: rotateY(135deg) translateZ(400px); background-image: url('../img/agua4.webp'); }
+.slide:nth-child(5) { transform: rotateY(180deg) translateZ(400px); background-image: url('../img/agua5.jpg'); }
+.slide:nth-child(6) { transform: rotateY(225deg) translateZ(400px); background-image: url('../img/agua6.jpg'); }
+.slide:nth-child(7) { transform: rotateY(270deg) translateZ(400px); background-image: url('../img/agua7.jpg'); }
+.slide:nth-child(8) { transform: rotateY(315deg) translateZ(400px); background-image: url('../img/agua8.jpg'); }
+
+@keyframes rotate {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+}
+
+/*** Social Media Icons ***/
+.redes {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 20px;
 }
 
-.header-carousel .owl-nav .owl-prev,
-.header-carousel .owl-nav .owl-next {
-    margin: 7px 0;
-    width: 45px;
-    height: 45px;
+.icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #FFFFFF;
-    background: #00bf63;
-    border: 1px solid #FFFFFF;
-    border-radius: 45px;
-    font-size: 22px;
-    transition: .5s;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    color: white;
+    border-radius: 50%;
+    margin: 40px;
+    text-decoration: none;
+    font-size: 20px;
 }
 
-.header-carousel .owl-nav .owl-prev:hover,
-.header-carousel .owl-nav .owl-next:hover {
-    background: var(--primary);
-    border-color: var(--primary);
+.icon:hover {
+    background-color: #555;
 }
 
+/*** Mineralogy Section ***/
+#mineralogia {
+    margin-top: 10vh;
+    padding-top: 20px;
+}
+
+.container-minerlogia {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.rocas, .suelo {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 350px;
+}
+
+.rocas img, .suelo img {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/*** Page Header ***/
 .page-header {
     background: linear-gradient(rgba(6, 3, 21, .5), rgba(6, 3, 21, .5)), url(../img/carousel-1.jpg) center center no-repeat;
     background-size: cover;
@@ -550,54 +399,99 @@ html, body {
     color: var(--light);
 }
 
-
-/*** About ***/
+/*** About Section ***/
 @media (min-width: 992px) {
     .container.about {
         max-width: 100% !important;
     }
 
-    .about-text  {
+    .about-text {
         padding-right: calc(((100% - 960px) / 2) + .75rem);
     }
-}
-
-@media (min-width: 1200px) {
-    .about-text  {
-        padding-right: calc(((100% - 1140px) / 2) + .75rem);
-    }
-}
-
-@media (min-width: 1400px) {
-    .about-text  {
-        padding-right: calc(((100% - 1320px) / 2) + .75rem);
-    }
-}
-
-
-/*** Feature ***/
-@media (min-width: 992px) {
+    
     .container.feature {
         max-width: 100% !important;
     }
 
-    .feature-text  {
+    .feature-text {
         padding-left: calc(((100% - 960px) / 2) + .75rem);
+    }
+    
+    .container.contact-page {
+        max-width: 100% !important;
+    }
+
+    .contact-page .contact-form {
+        padding-left: calc(((100% - 960px) / 2) + .75rem);
+    }
+    
+    /* Navbar Desktop Styles */
+    .navbar-light .navbar-nav .nav-link::before {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 5px;
+        top: -6px;
+        left: 50%;
+        background: #FFFFFF;
+        transition: .5s;
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover::before,
+    .navbar-light .navbar-nav .nav-link.active::before {
+        width: 100%;
+        left: 0;
+    }
+
+    .navbar-light .navbar-nav .nav-link.nav-contact::before {
+        display: none;
+    }
+
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        border: none;
+        margin-top: 0;
+        top: 150%;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        top: 100%;
+        visibility: visible;
+        transition: .5s;
+        opacity: 1;
     }
 }
 
 @media (min-width: 1200px) {
-    .feature-text  {
+    .about-text {
+        padding-right: calc(((100% - 1140px) / 2) + .75rem);
+    }
+    
+    .feature-text {
+        padding-left: calc(((100% - 1140px) / 2) + .75rem);
+    }
+    
+    .contact-page .contact-form {
         padding-left: calc(((100% - 1140px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1400px) {
-    .feature-text  {
+    .about-text {
+        padding-right: calc(((100% - 1320px) / 2) + .75rem);
+    }
+    
+    .feature-text {
+        padding-left: calc(((100% - 1320px) / 2) + .75rem);
+    }
+    
+    .contact-page .contact-form {
         padding-left: calc(((100% - 1320px) / 2) + .75rem);
     }
 }
-
 
 /*** Service, Price & Team ***/
 .service-item,
@@ -679,58 +573,6 @@ html, body {
     background: var(--secondary);
 }
 
-.container-minerlogia {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-}
-
-.rocas, .suelo {
-    flex: 1;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between; /* Asegura alineación uniforme */
-    min-height: 350px; /* Ajusta según necesites */
-}
-
-.rocas img, .suelo img {
-    width: 100%;
-    max-width: 600px;
-    height: 300px; /* Unifica la altura */
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-
-
-
-/*** Contact ***/
-@media (min-width: 992px) {
-    .container.contact-page {
-        max-width: 100% !important;
-    }
-
-    .contact-page .contact-form  {
-        padding-left: calc(((100% - 960px) / 2) + .75rem);
-    }
-}
-
-@media (min-width: 1200px) {
-    .contact-page .contact-form  {
-        padding-left: calc(((100% - 1140px) / 2) + .75rem);
-    }
-}
-
-@media (min-width: 1400px) {
-    .contact-page .contact-form  {
-        padding-left: calc(((100% - 1320px) / 2) + .75rem);
-    }
-}
-
-
 /*** Footer ***/
 .footer {
     background: linear-gradient(rgba(6, 3, 21, .5), rgba(6, 3, 21, .5)), url(../img/map.png) center center no-repeat;
@@ -788,12 +630,111 @@ html, body {
 .footer .copyright a {
     color: var(--light);
 }
+
+/* Typography */
+h1 {
+    font-size: 2rem !important;
+    font-weight: bold;
+}
+
+/* Container Utilities */
+.container-fluid.p-0.pb-5 {
+    padding-bottom: 0 !important;
+}
+
+/*** Media Queries - Consolidated ***/
+/* Mobile Navigation */
+@media (max-width: 991.98px) {
+    .navbar-light .navbar-nav .nav-link {
+        margin-right: 0;
+        padding: 10px 0;
+    }
+
+    .navbar-light .navbar-nav {
+        border-top: 1px solid #EEEEEE;
+    }
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    /* Header Carousel Mobile */
+    .header-carousel .owl-carousel-item {
+        position: relative;
+        min-height: 50vh;
+    }
+    
+    .header-carousel .owl-carousel-item img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .header-carousel .owl-carousel-item h5,
+    .header-carousel .owl-carousel-item p {
+        font-size: 14px !important;
+        font-weight: 400 !important;
+    }
+
+    .header-carousel .owl-carousel-item h1 {
+        font-size: 30px;
+        font-weight: 600;
+    }
+    
+    /* Button Adjustments */
+    .header-carousel .btn {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    /* Content Height */
+    .contenido {
+        min-height: 200px;
+    }
+    
+    /* Mineralogy Container */
+    .container-minerlogia {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 10px;
+    }
+}
+
+/* Tablet and Low Height Screens */
 @media (max-width: 1024px) and (max-height: 600px) {
-    .slide {margin: 45px;}
+    .header-carousel .owl-carousel-item {
+        height: 80vh !important;
+    }
+
+    .header-carousel .owl-carousel-item img {
+        height: 80vh !important;
+        object-fit: cover !important;
+    }
+
+    .header-carousel .owl-carousel-item h1 {
+        font-size: 2rem !important;
+    }
+
+    .header-carousel .owl-carousel-item h5 {
+        font-size: 1rem !important;
+    }
+
+    .header-carousel .btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    
+    .slide {
+        margin: 45px;
+    }
+    
     #mineralogia {
         margin-top: 49vh;
         padding-top: 20px;
     }
+    
     .body {
         display: flex;
         justify-content: center;
@@ -801,16 +742,18 @@ html, body {
         height: 50vh;
         background-color: #FFFFFF;
         perspective: 1000px;
-        margin-top: 60px
+        margin-top: 60px;
+    }
 }
-}
+
+/* Low Height Screens */
 @media (max-height: 600px) {
     .header-carousel .owl-carousel-item {
-        min-height: 60vh; /* Reduce el tamaño en horizontal */
+        min-height: 60vh;
     }
 
     .header-carousel .owl-carousel-item h1 {
-        font-size: 2rem; /* Reduce el tamaño del título */
+        font-size: 2rem;
     }
 
     .header-carousel .owl-carousel-item p {
@@ -822,25 +765,23 @@ html, body {
         font-size: 14px;
     }
 }
+
+/* Landscape Orientation */
 @media (orientation: landscape) {
     body {
-        overflow-y: auto; /* Permite hacer scroll en horizontal */
+        overflow-y: auto;
     }
 }
- @media (max-width: 1024px) and (orientation: landscape) {
+
+@media (max-width: 1024px) and (orientation: landscape) {
     .navbar {
         position: fixed !important;
-        top: -80px; /* Se oculta al inicio */
+        top: -80px;
         width: 100%;
         transition: top 0.3s ease-in-out;
     }
 
     body {
-        padding-top: 80px; /* Asegura que el contenido no quede tapado */
+        padding-top: 80px;
     }
-}
-
-h1 {
-    font-size: 3.2rem !important; /* Cambia el tamaño según lo necesites */
-    font-weight: bold;
 }
