@@ -784,4 +784,7 @@ h1 {
     body {
         padding-top: 80px;
     }
+    .header-carousel .owl-carousel-item .position-absolute {
+        padding-top: 226px !important;
+    }
 }
